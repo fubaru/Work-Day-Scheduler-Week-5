@@ -19,6 +19,10 @@ console.log(systemTime)
 
 function displayTimeBlockColors() {
     for(var i=0; i < timeBlocksArr.length; i++){
-        var currentText
+        var currentTextEl = $("#" +timeBlocksArr[i]);
+
+        if(currentHour>timeBlocksArr[i]) {
+            
+        }
     }
 }
