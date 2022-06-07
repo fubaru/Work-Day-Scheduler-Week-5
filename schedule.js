@@ -29,7 +29,13 @@ function displayTimeBlockColors() {
         var currentTextEl = $("#" +timeBlocksArr[i]);
 
         if(currentHour>timeBlocksArr[i]) {
-            
+            currentTextEl.addClass("past");
+        } else if (currentHour == timeBlocksArr[i]) {
+            currentTextEl.addClass("present");
+        } else {
+            currentTextEl.addClass("future")
         }
     }
 };
+// calling the displayTimeBlockColors Function
+displayTimeBlockColors();
