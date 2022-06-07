@@ -40,6 +40,7 @@ function displayTimeBlockColors() {
     }
 };
 
+// Store text input in local storage after clicking on saveBtn
 saveBtn.on("click", function(){
 
     var hour = $(this).siblings(".hour").text()
@@ -48,16 +49,5 @@ saveBtn.on("click", function(){
     localStorage.setItem(hour,input);
 })
 
-/*function saveInput() {
 
-    console.log(this)
-    var hour = $(this).siblings(".hour").text();
-    var input = $(this).siblings(".text").val();
-
-    localStorage.setItem(hour,input);
-};*/
-
-// calling the displayTimeBlockColors Function
 displayTimeBlockColors();
-
-// saveBtn.addEventListener("click", saveInput)
