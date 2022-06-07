@@ -40,15 +40,24 @@ function displayTimeBlockColors() {
     }
 };
 
-function saveInput() {
+saveBtn.on("click", function(){
+
+    var hour = $(this).siblings(".hour").text()
+    var input = $(this).siblings(".desc").val()
+
+    localStorage.setItem(hour,input);
+})
+
+/*function saveInput() {
 
     console.log(this)
     var hour = $(this).siblings(".hour").text();
     var input = $(this).siblings(".text").val();
 
     localStorage.setItem(hour,input);
-}; 
+};*/
+
 // calling the displayTimeBlockColors Function
 displayTimeBlockColors();
 
-saveBtn.addEventListener("click", saveInput)
+// saveBtn.addEventListener("click", saveInput)
