@@ -23,6 +23,8 @@ var systemTime = moment().format("dddd, MMMM Do");
 currentDay.text(systemTime);
 console.log(systemTime);
 
+var saveBtn = $(".saveBtn")
+
 // creating the step 4 functions for past, present, and future timeblocks
 function displayTimeBlockColors() {
     for(var i=0; i < timeBlocksArr.length; i++){
@@ -37,5 +39,16 @@ function displayTimeBlockColors() {
         }
     }
 };
+
+function saveInput() {
+
+    console.log(this)
+    var hour = $(this).siblings(".hour").text();
+    var input = $(this).siblings(".text").val();
+
+    localStorage.setItem(hour,input);
+}; 
 // calling the displayTimeBlockColors Function
 displayTimeBlockColors();
+
+saveBtn.addEventListener("click", saveInput)
