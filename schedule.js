@@ -37,6 +37,8 @@ function displayTimeBlockColors() {
         } else {
             currentTextEl.addClass("future")
         }
+
+        // get stored items in local storage back onto the page
         var event = localStorage.getItem(standardTime[i]);
         if (event) {
             $('#'+timeBlocksArr[i]).val(event)
