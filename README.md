@@ -40,9 +40,9 @@ Credit to my study group with Justin Felming and Taja jones.
 
 ## Badges
 
-![badmath](https://img.shields.io/badge/JavaScript-67.7%-yellow)
-![badmath](https://img.shields.io/badge/HTML-19.6%25-orange)
-![badmath](https://img.shields.io/badge/CSS-12.7%25-purple)
+![badmath](https://img.shields.io/badge/HTML-52.5%25-orange)
+![badmath](https://img.shields.io/badge/CSS-17.3%25-purple)
+![badmath](https://img.shields.io/badge/JavaScript-30.2-yellow)
 
 
 ## Features
