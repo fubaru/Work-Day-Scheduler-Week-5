@@ -10,7 +10,7 @@
 
 // converting time blocks to military time and defined the variable with array
 var timeBlocksArr=[9,10,11,12,13,14,15,16,17];
-
+var standardTime = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]
 // define current hour variable to us in a for loop
 var currentHour = moment().hour();
 // grabbing static selector to use to display currnet time using moment()
@@ -37,6 +37,10 @@ function displayTimeBlockColors() {
         } else {
             currentTextEl.addClass("future")
         }
+        var event = localStorage.getItem(standardTime[i]);
+        if (event) {
+            $('#'+timeBlocksArr[i]).val(event)
+        }
     }
 };
 
@@ -47,7 +51,10 @@ saveBtn.on("click", function(){
     var input = $(this).siblings(".desc").val()
 
     localStorage.setItem(hour,input);
+    displayTimeBlockColors();
 })
+
+
 
 
 displayTimeBlockColors();
